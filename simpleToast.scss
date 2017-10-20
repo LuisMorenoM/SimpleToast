@@ -1,0 +1,57 @@
+
+/*
+    simpleToast - main scss
+*/
+.simpleToast {
+    &-item {
+        display: none;
+        min-width: 225px;
+        position: relative;
+        cursor: pointer;
+        &-icon {
+            position: absolute;
+            right: 15px;
+            top: 50%;
+            transform: translateY(-50%);
+            cursor: pointer;
+        }
+        &-span {
+            display: block;
+            width: 95%;
+        }
+    }
+    &-global {
+        position: fixed;
+        max-width: 300px;
+        right: 10px;
+        bottom: 10px;
+        z-index: 99999;
+    }
+}
+
+//DEPRECATED
+
+/*.simpleToast-item {
+	display: none;
+	min-width: 225px;
+	position: relative;
+	cursor: pointer;
+}
+.simpleToast-item-icon {
+    position: absolute;
+    right: 15px;
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+}
+.simpleToast-global {
+    position: fixed;
+    max-width: 300px;
+    right: 10px;
+    bottom: 10px;
+    z-index: 99999;
+}
+.simpleToast-item-span {
+    display: block;
+	width: 95%;
+}*/

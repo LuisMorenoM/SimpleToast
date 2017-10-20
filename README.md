@@ -4,3 +4,6 @@ Simple Javascript library for toast notifications. Inspired in [Toastr](https://
 
 ## Dependencies
 - jQuery
+
+## License
+MIT
