@@ -11,7 +11,7 @@ var simpleToast = function() {
 
 	var _coreB = function(type, msg) {
 		var core = `
-			<div class="simpleToast-itemsimpleToast-${type}">
+			<div class="simpleToast-item simpleToast-${type} alert alert-${type}">
 				<span class="simpleToast-item-span">${msg}</span>
 				<i class="simpleToast-item-icon fa fa-close"></i>
 			</div>`
@@ -47,7 +47,7 @@ var simpleToast = function() {
 	}
 
 	var newToast = function(type, msg, mglobal=false, clearStack=false) {
-		
+
 		var core 	= _coreB(type, msg);
 		var parent 	= _makeParent(mglobal);
 
@@ -55,7 +55,7 @@ var simpleToast = function() {
 		parent.append(core);
 
 		$('.simpleToast-item').fadeIn();
-		$('.simpleToast-item').on('click', close);
+		$('.simpleToast-item').on('click', _close);
 
 	}		
 
@@ -65,7 +65,7 @@ var simpleToast = function() {
 	}
 
 	return {
-		newsimpleToast 	: newsimpleToast,
+		newToast 	: newToast,
 		clear 		: clear,
 	}
 }()

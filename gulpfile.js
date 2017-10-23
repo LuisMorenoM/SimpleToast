@@ -10,8 +10,8 @@ var gulp 			= require('gulp'),
 	autoprefixer 	= require('gulp-autoprefixer');
 	
 var path = {
-	js 		: './simpleToast.js',
-	sass 	: './simpleToast.scss',
+	js 		: './core/simpleToast.js',
+	sass 	: './core/simpleToast.scss',
 	build 	: './build'
 }
 
@@ -39,5 +39,6 @@ gulp.task('js', function(cb) {
 gulp.task('all', ['styles', 'js'])
 
 gulp.task('watch', function() {
-	gulp.watch(path.sass, ['all'])
+	gulp.watch(path.sass, ['styles']);
+	gulp.watch(path.js, ['js']);
 })
