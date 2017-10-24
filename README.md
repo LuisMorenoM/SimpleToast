@@ -14,3 +14,17 @@ Made with jQuery, FontAwesome and Bootstrap. Support any alert class.
 
 ## License
 MIT
+
+## Install
+* link to the ```build/simpleToast.min.js```
+* link to the ```build/simpleToast.min.css```
+
+* Use simpleToast
+```
+ simpleToast.newToast('danger', 'Your message');
+```
+### Params
+1. Type (Bootstrap [alerts](https://getbootstrap.com/docs/3.3/components/#alerts)
+2. Message to display
+
+
