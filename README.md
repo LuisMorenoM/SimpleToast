@@ -24,7 +24,7 @@ MIT
  simpleToast.newToast('danger', 'Your message');
 ```
 ### Params
-1. Type (Bootstrap [alerts](https://getbootstrap.com/docs/3.3/components/#alerts)
+1. Type (Bootstrap [alerts](https://getbootstrap.com/docs/3.3/components/#alerts))
 2. Message to display
 
 

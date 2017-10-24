@@ -46,7 +46,7 @@ var simpleToast = function() {
 		return containerparent;
 	}
 
-	var newToast = function(type, msg, mglobal=false, clearStack=false) {
+	var newToast = function(type, msg, mglobal=true, clearStack=false) {
 
 		var core 	= _coreB(type, msg);
 		var parent 	= _makeParent(mglobal);
