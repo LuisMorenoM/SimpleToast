@@ -4,6 +4,9 @@ Simple Javascript library for toast notifications. Inspired in [Toastr](https://
 
 Made with jQuery, FontAwesome and Bootstrap. Support any alert class.
 
+## Demo
+ View [Demo](https://luismorenom.github.io/SimpleToast/demo.html).
+
 ## Dependencies
 - jQuery
 - Bootstrap
