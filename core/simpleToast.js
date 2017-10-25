@@ -54,8 +54,12 @@ var simpleToast = function() {
 		_clearStackB(parent, clearStack);
 		parent.append(core);
 
-		$('.simpleToast-item').fadeIn();
-		$('.simpleToast-item').on('click', _close);
+		var current = parent.children().last();
+
+		current.fadeIn();
+		current.on('click', _close);
+		// closure <3
+		setTimeout(function(){current.click()}, 3000)
 
 	}		
 
