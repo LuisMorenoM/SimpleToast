@@ -26,5 +26,6 @@ MIT
 ### Params
 1. Type (Bootstrap [alerts](https://getbootstrap.com/docs/3.3/components/#alerts))
 2. Message to display
+3. AutoClose, set the timeout delay.
 
 

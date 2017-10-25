@@ -46,7 +46,7 @@ var simpleToast = function() {
 		return containerparent;
 	}
 
-	var newToast = function(type, msg, mglobal=true, clearStack=false) {
+	var newToast = function(type, msg, autoClose=3000, mglobal=true, clearStack=false) {
 
 		var core 	= _coreB(type, msg);
 		var parent 	= _makeParent(mglobal);
@@ -59,7 +59,7 @@ var simpleToast = function() {
 		current.fadeIn();
 		current.on('click', _close);
 		// closure <3
-		setTimeout(function(){current.click()}, 3000)
+		setTimeout(function(){current.click()}, autoClose);
 
 	}		
 
