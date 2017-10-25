@@ -21,7 +21,7 @@ MIT
 
 * Use simpleToast
 ```
- simpleToast.newToast('danger', 'Your message');
+ simpleToast.newToast('danger', 'Your message', 4000);
 ```
 ### Params
 1. Type (Bootstrap [alerts](https://getbootstrap.com/docs/3.3/components/#alerts))
