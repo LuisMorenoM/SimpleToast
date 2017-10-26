@@ -28,4 +28,9 @@ MIT
 2. Message to display
 3. Custom delay (Optional).
 
+### Clear All
+```
+simpleToast.clear();
+```
+
 

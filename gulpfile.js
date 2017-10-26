@@ -2,6 +2,7 @@
 var gulp 		  	= require('gulp'), //gulp
 	pump 			= require('pump'), //show js errors
 	babel			= require('gulp-babel'), //compile es6 js
+	header 			= require('gulp-header'), //add header comment
 
 	sass 			= require('gulp-sass'), //to compile sass
     concat 			= require('gulp-concat'), //to concat
@@ -17,12 +18,22 @@ var path = {
 	build 	: './build'
 }
 
+var pkg = require('./package.json');
+var banner = ['/**',
+  ' * <%= pkg.name %> - <%= pkg.description %>',
+  ' * @version v<%= pkg.version %>',
+  ' * @link <%= pkg.homepage %>',
+  ' * @license <%= pkg.license %>',
+  ' */',
+  ''].join('\n');
+
 //SASS task. Compile css, concat all in 1 and minify
 gulp.task('sass', function(){
 	gulp.src(path.sass)
 		.pipe(sass())
 		.pipe(concat('simpleToast.min.css'))
 		.pipe(minify())
+		.pipe(header(banner, { pkg : pkg } ))
 		.pipe(gulp.dest(path.build))
 })
 
@@ -35,7 +46,8 @@ gulp.task('js', function(cb) {
 	    }))
 		.pipe(concat('simpleToast.js'))
 		.pipe(uglify())
-		.pipe(rename('simpleToast.min.js')),
+		.pipe(rename('simpleToast.min.js'))
+		.pipe(header(banner, { pkg : pkg } )),
 		gulp.dest(path.build)
 	], cb );
 })

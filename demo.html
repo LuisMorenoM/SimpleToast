@@ -14,16 +14,26 @@
 		<h1>SimpleToast</h1>
 		<hr>
 		<div class="row">
-			<div class="text-center col-xs-12">
+			<div class="text-center col-xs-6">
 				<label for="basic-url">Message</label>
 				<input type="text" class="form-control js-message">
-				<hr>
+				
+			</div>
+			<div class="text-center col-xs-6">
+				<label for="basic-url">Time(ms)</label>
+				<input type="number" class="form-control js-time">
+				
 			</div>
 			<div class="text-center col-xs-12">
+				<hr>
 				<button class="btn btn-danger js-global-toast" data-type="danger">Danger</button>
 				<button class="btn btn-success js-global-toast" data-type="success">Success</button>
 				<button class="btn btn-warning js-global-toast" data-type="warning">Warning</button>
 				<button class="btn btn-info js-global-toast" data-type="info">Info</button>
+			</div>
+			<div class="text-center col-xs-12">
+				<hr>
+				<button class="btn btn-danger js-clear" data-type="info">Clear</button>
 			</div>
 		</div>
 	</div>
@@ -32,11 +42,18 @@
 	<script>
 		$('.js-global-toast').click(function(){
 			$msg = `Hi this is a ${$(this).data('type')} alert`;
+			$time = false;
 
 			if($('.js-message').val())
 				$msg = $('.js-message').val();
+
+			if($('.js-time').val())
+				$time = $('.js-time').val();
 			
-			simpleToast.newToast($(this).data('type'), $msg, 5000);
+			simpleToast.newToast($(this).data('type'), $msg, $time);
+		})
+		$('.js-clear').click(function(){
+			simpleToast.clear();
 		})
 	</script>
 </body>
