@@ -59,8 +59,9 @@ var simpleToast = function() {
 		current.fadeIn();
 		current.on('click', _close);
 		// closure <3
-		setTimeout(function(){current.click()}, autoClose);
-
+		if(autoClose !== false) {
+			setTimeout(function(){current.click()}, autoClose);
+		}
 	}		
 
 	var clear = function() {
